@@ -3,11 +3,11 @@ const app = express();
 var mongoose = require('mongoose');
 
 // CORS configuration
-const corsOptions ={
-    origin:'*', 
-    credentials:true, 
-    optionSuccessStatus:200
-}
+// const corsOptions ={
+//     origin:'*', 
+//     credentials:true, 
+//     optionSuccessStatus:200
+// }
 const cors = require('cors');
 
 var routes = require('./routes/routes')
@@ -31,5 +31,8 @@ app.listen(8086, () => {
 app.use(cors());
 app.use(express.json());
 app.use(routes);
-app.use(cors(corsOptions));
-
+app.use(cors({
+    "Access-Control-Allow-Origin": "*", // This allows all origins
+    "Access-Control-Allow-Headers": "Content-Type, Authorization",
+    "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS"
+  }));
