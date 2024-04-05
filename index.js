@@ -3,12 +3,11 @@ const app = express();
 var mongoose = require('mongoose');
 
 // CORS configuration
-const corsOptions = {
-    origin: 'https://nikhileshlingamgunta.netlify.app', // or use '*' to allow any origin
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    allowedHeaders: ['Content-Type', 'Authorization'],
-  };
-  
+const corsOptions ={
+    origin:'*', 
+    credentials:true, 
+    optionSuccessStatus:200
+}
 const cors = require('cors');
 
 var routes = require('./routes/routes')
