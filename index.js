@@ -11,7 +11,7 @@ var mongoose = require('mongoose');
 const cors = require('cors');
 
 var routes = require('./routes/routes')
-const uri = "mongodb+srv://lnikhilesh1705:OnmHuPvXV8e7UXLM@responses.rftdve0.mongodb.net/Portfolio";
+const uri = "mongodb+srv://lnikhilesh1705:OnmHuPvXV8e7UXLM@responses.rftdve0.mongodb.net/";
 
 async function connect() {
     try {
